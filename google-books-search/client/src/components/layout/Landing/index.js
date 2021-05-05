@@ -1,5 +1,7 @@
 import React from "react";
 import "./style.css";
+import Search from "../Search";
+import Saved from "../Saved";
 
 function Jumbotron() {
     return (
@@ -8,6 +10,8 @@ function Jumbotron() {
             <a target="_blank" rel="noopener noreferrer" href="http://www.google.com/about/api/">
                 Powered by Google Book Searcher
       </a>
+      <Search />
+      <Saved />
         </div>
     );
 }

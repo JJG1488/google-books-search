@@ -1,27 +1,34 @@
 // import logo from './logo.svg';
 import './App.css';
-import Jumbotron from "./components/layout/Jumbotron";
+import Landing from "./components/layout/Landing";
+import Search from "./components/layout/Search";
+import { BrowserRouter, Route, Link } from "react-router-dom";
 
 
 function App() {
   return (
     <div className="App">
+    <BrowserRouter >
       <header className="App-header">
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
         <p>
           something can go here
         </p>
-        <a
+        <Link
           className="App-link"
-          href="https://google.com/"
+          to="https://google.com/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          
-        </a>
+          Google Link
+        </Link>
 
-        <Jumbotron/>
+        <Landing/>
+        
       </header>
+
+      {/* <Route path="/" component={Search} /> */}
+      </BrowserRouter>
     </div>
   );
 }
