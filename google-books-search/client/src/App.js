@@ -1,45 +1,32 @@
-// import logo from './logo.svg';
-import './App.css';
-import Landing from "./components/layout/Landing";
-import Search from "./components/layout/Search";
-import Saved from "./components/layout/Saved";
-import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
+import React from 'react';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import Navbar from './components/layout/Navbar';
+import Wrapper from './components/layout/Wrapper';
+import Search from './components/pages/Search';
+import Saved from './components/pages/Saved';
 
+function App() { 
 
-function App() {
   return (
     <Router>
-      <div className="App">
+    <div>
+      <Navbar />
+      <Wrapper>
+        <Switch>
+          <Route exact path='/' component={Search}/>
+          <Route exact path="/saved" component={Saved}/>
+          <Route exact path="/saved:id" component={Saved}/>
+          <Route exact path="/search" component={Search}/>
 
-        <header className="App-header">
-          {/* <img src={logo} className="App-logo" alt="logo" /> */}
-          <p>
-            something can go here
-        </p>
-          <Link
-            className="App-link"
-            to="https://google.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Google Link
-        </Link>
-          <Switch>
-            <Route path="/" component={Landing} />
-            <Route path="/saved" component={Saved} />
-          </Switch>
+        </Switch>
+      </Wrapper>
+    </div>
+  </Router>
+  )
+
+  
 
 
-
-          <Landing />
-
-        </header>
-
-        {/* <Route path="/" component={Search} /> */}
-
-      </div>
-    </Router>
-  );
 }
 
 export default App;
