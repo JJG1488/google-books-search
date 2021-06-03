@@ -10,9 +10,6 @@ const path = require("path");
 const mongoose = require('mongoose');
 const routes = require("./routes");
 
-console.log(process.env);
-console.log(process.env.api_key33)
-
 // set up body parsing, static, and route middleware
 // =================================================
 app.use(express.json());
