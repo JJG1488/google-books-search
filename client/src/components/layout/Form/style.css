@@ -1,0 +1,24 @@
+.form{
+    padding:1rem 10%;
+}
+
+#search{ 
+    width: 90%;
+    box-shadow: 5px 5px 10px rgba(0,0,0, 0.03);
+    font-weight: bold;
+}
+
+.search-button{
+    text-transform: uppercase;
+    appearance: none;
+    cursor: pointer;
+}
+
+#search:hover,
+#search:focus,
+.search-button:hover,
+.search-button:focus {outline:none}
+
+.search-button:hover {
+    background: orange;
+}
